@@ -70,7 +70,7 @@ class LinkedList:
                 itr = itr.next
                 count +=1
 
-%insertion of element at the specified position
+#insertion of element at the specified position
     def insert_at(self, index, data):
         if index<0 or index>=self.get_length():
             raise Exception("Invalid index")
@@ -102,6 +102,21 @@ def insert_after_value(self, data_after, data_to_insert):
                 itr.next = Node(data_to_insert, itr.next)
                 break
 
+            itr = itr.next
+
+def remove_by_value(self, data):
+        if self.head is None:
+            return
+
+        if self.head.data == data:
+            self.head = self.head.next
+            return
+
+        itr = self.head
+        while itr.next:
+            if itr.next.data == data:
+                itr.next = itr.next.next
+                break
             itr = itr.next
 
 if __name__ == '__main__':
